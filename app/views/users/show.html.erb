@@ -1,0 +1,8 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @tweets.each do |tweet| %>
+   <%# renderで部分テンプレートを呼び出す。partialで部分テンプレート名を指定。
+     localsで、部分テンプレート内で変数tweetを使えるようにする %>
+    <%= render partial: "tweets/tweet", locals: {tweet: tweet} %>
+  <% end %>              <%#  ↑ 同じディレクトリではないため、どこのディレクトリにある部分テンプレートなのかを明示的に指定%>
+</div>

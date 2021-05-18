@@ -1,0 +1,8 @@
+<div class="contents row">
+  <div class="container">
+    <h3>投稿する</h3>
+    <%# renderで部分テンプレートを呼び出す。partialで部分テンプレート名を指定。
+        localsで、部分テンプレート内で変数tweetを使えるようにする。 %>
+    <%= render partial: "form", locals: {tweet: @tweet} %>
+  </div> <%# _form.htnl.erbに@tweetをキーとして渡さなければならない。locals: {tweet: @tweet} %>
+</div>
